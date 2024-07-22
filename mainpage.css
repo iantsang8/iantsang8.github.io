@@ -212,6 +212,10 @@ a {
         position: relative;
         display: inline-block;
     }
+    
+    .dropdown:hover .nav--buttons {
+        background-color: transparent;
+    }
 
     .dropdown-content {
         display: none;
