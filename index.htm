@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <!--Version: 22/07/2024 3:33pm-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="mainpage.css">
-        <style>
-        </style>
         <title>Home | Ian Tsang</title>
         <link rel="icon" type="image/x-icon" href="ian_tsang.jpg">
     </head>
@@ -44,53 +41,11 @@
             <h1>
                 Ian Tsang
             </h1>
-            <h2>
-                EE/CMPEN
-            </h2>
+            <h2 id="typing-text"></h2>
         </div>
         <br>
         <h1>lalalala</h1>
 
-        <script>
-            function toggleMenu() {
-                var navLinks = document.querySelector('.nav-links');
-                var closeBtn = document.querySelector('.close-btn');
-                var menuHeader = document.querySelector('.menu-header');
-                navLinks.classList.toggle('show');
-                closeBtn.classList.toggle('show');
-                menuHeader.classList.toggle('show');
-                var dropdownContent = document.getElementById('dropdown-content');
-                    dropdownContent.classList.remove('show');
-            }
-
-            function closeMenu() {
-                var navLinks = document.querySelector('.nav-links');
-                var closeBtn = document.querySelector('.close-btn');
-                var menuHeader = document.querySelector('.menu-header');
-                navLinks.classList.remove('show');
-                closeBtn.classList.remove('show');
-                menuHeader.classList.remove('show');
-                var dropdownContent = document.getElementById('dropdown-content');
-                    dropdownContent.classList.remove('show');
-            }
-
-            function checkWidth() {
-                if (window.innerWidth > 768) {
-                    closeMenu();
-                }
-            }
-
-            function toggleDropdown(event) {
-                if (window.innerWidth <= 768) {
-                    event.preventDefault();
-                    var dropdownContent = document.getElementById('dropdown-content');
-                    dropdownContent.classList.toggle('show');
-                }
-            }
-
-            window.addEventListener('resize', checkWidth);
-
-            checkWidth();
-        </script>
+        <script src="homejs.js"></script>
     </body>
 </html>
