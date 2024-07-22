@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="mainpage.css">
+        <style>
+        </style>
+        <title>Home | Ian Tsang</title>
+        <link rel="icon" type="image/x-icon" href="ian_tsang.jpg">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar--sticky">
+                <div>
+                    <h1 class="name--button">
+                        <a href="https://www.google.com">Ian's Google</a>
+                    </h1>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="close-btn" onclick="toggleMenu()">x</div>
+                <div class="menu-header">Ian Tsang</div>
+                <div class="nav-links">
+                    <a class="nav--buttons" href="https://www.psu.edu">Ian's PSU</a>
+                    <a class="nav--buttons" href="https://www.astri.org">Ian's Work</a>
+                    <div class="dropdown">
+                        <span class="nav--buttons dropdown-toggle" onclick="toggleDropdown(event)">Ian's List &#9662;</span>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="#">Item 1</a>
+                            <a href="#">Item 2</a>
+                            <a href="#">Item 3</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="profile">
+            <img src="ian_tsang.jpg" alt="Ian Tsang Profile Pic" width="142" height="142">
+            <h1>
+                Ian Tsang
+            </h1>
+            <h2>
+                EE/CMPEN
+            </h2>
+        </div>
+        <br>
+        <h1>lalalala</h1>
+
+        <script>
+            function toggleMenu() {
+                var navLinks = document.querySelector('.nav-links');
+                var closeBtn = document.querySelector('.close-btn');
+                var menuHeader = document.querySelector('.menu-header');
+                navLinks.classList.toggle('show');
+                closeBtn.classList.toggle('show');
+                menuHeader.classList.toggle('show');
+                var dropdownContent = document.getElementById('dropdown-content');
+                    dropdownContent.classList.remove('show');
+            }
+
+            function closeMenu() {
+                var navLinks = document.querySelector('.nav-links');
+                var closeBtn = document.querySelector('.close-btn');
+                var menuHeader = document.querySelector('.menu-header');
+                navLinks.classList.remove('show');
+                closeBtn.classList.remove('show');
+                menuHeader.classList.remove('show');
+                var dropdownContent = document.getElementById('dropdown-content');
+                    dropdownContent.classList.remove('show');
+            }
+
+            function checkWidth() {
+                if (window.innerWidth > 768) {
+                    closeMenu();
+                }
+            }
+
+            function toggleDropdown(event) {
+                if (window.innerWidth <= 768) {
+                    event.preventDefault();
+                    var dropdownContent = document.getElementById('dropdown-content');
+                    dropdownContent.classList.toggle('show');
+                }
+            }
+
+            window.addEventListener('resize', checkWidth);
+
+            checkWidth();
+        </script>
+    </body>
+</html>
