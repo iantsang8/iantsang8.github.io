@@ -129,6 +129,7 @@ a {
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
+    font-size: large;
 }
 
 .additional-content {
@@ -244,5 +245,16 @@ a {
 
     .dropdown-toggle {
         cursor: pointer;
+    }
+}
+
+#typing-text span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
     }
 }
