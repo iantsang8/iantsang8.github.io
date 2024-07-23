@@ -154,6 +154,7 @@ nav.navbar--sticky.scrolled {
     margin-top: 0px;
     margin-bottom: 30px;
     font-family: Verdana, sans-serif;
+    font-size: 40px;
 }
 
 .about-container {
@@ -167,6 +168,14 @@ nav.navbar--sticky.scrolled {
 .about-text {
     margin-left:50px;
     flex-basis: 64%;
+}
+
+h1.about-text {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left:0px;
+    color:#0e0e0e;
+    font-family: Verdana, sans-serif;
 }
 
 .character {
@@ -202,20 +211,20 @@ nav.navbar--sticky.scrolled {
 }
 
 .eye {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top: 30%;
+    top: 35%;
 }
 
 .left-eye {
-    left: 25%;
+    left: 20%;
 }
 
 .right-eye {
-    right: 25%;
+    right: 20%;
 }
 
 .pupil {
@@ -227,6 +236,67 @@ nav.navbar--sticky.scrolled {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.eyebrow {
+    position: absolute;
+    width: 40px;
+    height: 8px;
+    background-color: black;
+    top: 25%;
+    border-radius: 4px;
+}
+
+.left-eyebrow {
+    left: 20%;
+    transform: rotate(-10deg);
+}
+
+.right-eyebrow {
+    right: 20%;
+    transform: rotate(10deg);
+}
+
+.hair {
+    position: absolute;
+    /*
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 60px;
+    background-color: black;*/
+}
+
+.smile {
+    width: 80px;
+    height: 30px;
+    border-radius: 0 0 100px 100px;
+    border: 10px solid black;
+    border-top: none;
+    position: absolute;
+    bottom: 30%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ear {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #ffdb99;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-ear {
+    left: -20px;
+}
+
+.right-ear {
+    right: -20px;
 }
 
 .sliders {
