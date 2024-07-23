@@ -186,6 +186,7 @@ h1.about-text {
     width: 100%;
     max-width: 300px; /* Adjust this value as needed */
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .frame {
@@ -199,33 +200,38 @@ h1.about-text {
     box-sizing: border-box;
 }
 
-.face {
-    width: 200px;
-    height: 200px;
-    background-color: #ffdb99;
+.frameimg {
     border-radius: 50%;
     position: absolute;
+    width:100%;
+    height:100%;
+    max-width: 100%;
+    max-height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 0.5s;
 }
 
-.eye {
-    width: 40px;
-    height: 40px;
-    background-color: white;
+.circle1, .circle2 {
     border-radius: 50%;
     position: absolute;
-    top: 35%;
-}
-
-.left-eye {
-    left: 20%;
-}
-
-.right-eye {
-    right: 20%;
-}
+    background-color: rgba(255, 255, 255, 1); /* Semi-transparent white */
+  }
+  
+  .circle1 {
+    width: 50px; /* Width of the first circle */
+    height: 50px; /* Height of the first circle */
+    top: 50%; /* Position from the top */
+    left: 35%; /* Position from the left */
+  }
+  
+  .circle2 {
+    width: 50px; /* Width of the second circle */
+    height: 50px; /* Height of the second circle */
+    bottom: 30%; /* Position from the bottom */
+    right: 30%; /* Position from the right */
+  }
 
 .pupil {
     width: 20px;
@@ -238,65 +244,37 @@ h1.about-text {
     transform: translate(-50%, -50%);
 }
 
-.eyebrow {
-    position: absolute;
-    width: 40px;
-    height: 8px;
-    background-color: black;
-    top: 25%;
-    border-radius: 4px;
+.frame {
+    overflow: hidden;
+    position: relative;
 }
 
-.left-eyebrow {
-    left: 20%;
-    transform: rotate(-10deg);
+/* for bounce */
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, calc(-50% + 10px));
+    }
 }
 
-.right-eyebrow {
-    right: 20%;
-    transform: rotate(10deg);
+@keyframes bounceeyes {
+    0%, 100% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(20%);
+    }
 }
 
-.hair {
-    position: absolute;
-    /*
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 180px;
-    height: 60px;
-    background-color: black;*/
+
+.frameimg.bounce {
+    animation: bounce 0.5s;
 }
 
-.smile {
-    width: 80px;
-    height: 30px;
-    border-radius: 0 0 100px 100px;
-    border: 10px solid black;
-    border-top: none;
-    position: absolute;
-    bottom: 30%;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.ear {
-    position: absolute;
-    width: 30px;
-    height: 40px;
-    background-color: #ffdb99;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.left-ear {
-    left: -20px;
-}
-
-.right-ear {
-    right: -20px;
+.circle1.bounce, .circle2.bounce {
+    animation: bounceeyes 0.5s;
 }
 
 .sliders {
