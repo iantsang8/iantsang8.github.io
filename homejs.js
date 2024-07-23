@@ -66,7 +66,7 @@ function eraseText() {
     }
 }
 
-// Start the typing effect when the window loads
+// typing animation
 window.onload = startTyping;
 
 window.addEventListener('resize', checkWidth);
@@ -80,4 +80,58 @@ window.addEventListener('scroll', function() {
     } else {
         navbar.classList.remove('scrolled');
     }
+});
+
+// for image tilt
+const image = document.querySelector(".profile img");
+let imageRect = image.getBoundingClientRect();
+
+image.addEventListener("mouseenter", () => {
+    imageRect = image.getBoundingClientRect();
+});
+
+image.addEventListener("mousemove", (e) => {
+    const mouseX = e.clientX - imageRect.left;
+    const mouseY = e.clientY - imageRect.top;
+    
+    const centerX = imageRect.width / 2;
+    const centerY = imageRect.height / 2;
+    
+    const percentX = (mouseX - centerX) / centerX;
+    const percentY = -((mouseY - centerY) / centerY);
+    
+    const tiltX = percentY * 20; // Tilt on X-axis (vertical movement)
+    const tiltY = percentX * 20; // Tilt on Y-axis (horizontal movement)
+    
+    image.style.transform = `
+        translate(-50%, -50%)
+        perspective(1000px)
+        rotateX(${tiltX}deg)
+        rotateY(${tiltY}deg)
+        scale3d(1.05, 1.05, 1.05)
+    `;
+});
+
+image.addEventListener("mouseleave", () => {
+    image.style.transform = "translate(-50%, -50%) perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+});
+
+// for character eye movements
+document.addEventListener('mousemove', (e) => {
+    const eyes = document.querySelectorAll('.pupil');
+    eyes.forEach(eye => {
+        const rect = eye.getBoundingClientRect();
+        const eyeCenterX = rect.left + rect.width / 2;
+        const eyeCenterY = rect.top + rect.height / 2;
+        
+        const angleRad = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
+        const angleDeg = angleRad * 180 / Math.PI;
+        
+        const distance = Math.min(5, Math.sqrt(Math.pow(e.clientX - eyeCenterX, 2) + Math.pow(e.clientY - eyeCenterY, 2)) / 10);
+        
+        const pupilX = Math.cos(angleRad) * distance;
+        const pupilY = Math.sin(angleRad) * distance;
+        
+        eye.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+    });
 });
