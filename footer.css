@@ -1,0 +1,30 @@
+footer {
+    flex-shrink: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 8px;
+    display: flex; /* Use flexbox to layout footer content */
+    justify-content: space-between; /* Space between existing content and buttons */
+}
+
+footer p {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    margin-left: 5%;
+    white-space: nowrap;
+}
+
+/* Add styles for the buttons */
+.footer-buttons {
+    display: flex; /* Align buttons in a row */
+    gap: 10px; /* Space between buttons */
+    margin-right:1.2%;
+}
+
+.footer-buttons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
