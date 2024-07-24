@@ -1,10 +1,13 @@
-<!--Version: 23/07/2024-->
+<!--Version: 24/07/2024-->
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="mainpage.css">
+        <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="footer.css">
         <title>Home | Ian Tsang</title>
         <link rel="icon" type="image/x-icon" href="ian_tsang.jpg">
     </head>
@@ -25,15 +28,15 @@
                 <div class="close-btn" onclick="toggleMenu()">x</div>
                 <div class="menu-header">Ian Tsang</div>
                 <div class="nav-links">
-                    <a class="nav--buttons" href="https://iantsang8.github.io/About">About</a>
+                    <a class="nav--buttons" href="https://iantsang8.github.io/#about">About</a>
                     <a class="nav--buttons" href="https://iantsang8.github.io/Experience">Experience</a>
                     <a class="nav--buttons" href="https://iantsang8.github.io/Projects">Projects</a>
-                    <div class="dropdown">
-                        <span class="nav--buttons dropdown-toggle" onclick="toggleDropdown(event)">Contact Me &#9662;</span>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="nav--buttons dropdown-toggle" onclick="toggleDropdown(event)">Contact Me ▾</a>
                         <div class="dropdown-content" id="dropdown-content">
-                            <a href="#">LinkedIn</a>
-                            <a href="#">Email</a>   
-                            <a href="#">GitHub</a>
+                            <a href="https://www.linkedin.com/in/ian-tsang-107464166/" target="_blank">LinkedIn</a>
+                            <a href="iantsang8@gmail.com" target="_blank">Email</a>   
+                            <a href="https://github.com/iantsang8/" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -41,6 +44,7 @@
         </header>
 
         <div class="profile">
+            <canvas id="particle-overlay"></canvas>
             <img src="ian_tsang.jpg" alt="Ian Tsang Profile Pic" width="142" height="142">
             <h1>
                 Ian Tsang
@@ -48,7 +52,6 @@
             <h2 id="typing-text"></h2>
         </div>
         <section id="about">
-            <h2>About</h2>
             <div class="about-container">
                 <div class="character">
                     <div class="frame">
@@ -79,5 +82,17 @@
         </section>
 
         <script src="homejs.js"></script>
+        <script src="particles.js"></script>
+        <script src="character.js"></script>
     </body>
+    <footer>
+        <div>
+            <p>&copy; Copyright Ian Tsang 2024</p>
+        </div>
+        <div class="footer-buttons">
+            <a href="https://www.linkedin.com/in/ian-tsang-107464166/" target="_blank">LinkedIn</a>
+            <a href="iantsang8@gmail.com" target="_blank">Email</a>   
+            <a href="https://github.com/iantsang8/" target="_blank">GitHub</a>
+        </div>
+    </footer>
 </html>
