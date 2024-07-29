@@ -4,8 +4,18 @@ body, html {
     height: 100%;
 }
 
+
 body {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    scroll-snap-align: end;
+    padding-top: 60px; /* Add padding to account for the fixed navbar */
+    min-height: 100vh; /* Ensure each section takes at least the full viewport height */
+    box-sizing: border-box; /* Include padding in the height calculation */
 }
 
 a {
@@ -19,8 +29,9 @@ a:active, a:visited {
 /*about section*/
 #about {
     background-color: #f0f0f0; /* Light grey background */
-    padding: 39px 20px;
-    height: auto;
+    padding: 100px 20px 39px; /* Adjusted top padding */
+    min-height: 95vh;
+    transition: 0.5s;
 }
 
 #about h2 {
@@ -74,52 +85,85 @@ h1.about-text {
     min-width: 300px;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.2); /* Added shadow to the frame */
 }
+
 
 .frameimg {
     border-radius: 50%;
     position: absolute;
-    width:100%;
-    height:100%;
-    max-width: 100%;
-    max-height: 100%;
-    top: 50%;
+    width:120%;
+    height:130%;
+    max-width: 120%;
+    max-height: 130%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.5s;
     pointer-events: none;
     user-select: none;
+    z-index:5;
+}
+
+.frameimg-shadow {
+    border-radius: 50%;
+    position: absolute;
+    width: 120%;
+    height: 130%;
+    max-width: 120%;
+    max-height: 130%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50.5%, -49.5%);
+    transition: transform 0.5s;
+    pointer-events: none;
+    user-select: none;
+    filter: blur(5px) brightness(0);
+    z-index: 1;
 }
 
 .circle1, .circle2 {
     border-radius: 50%;
     position: absolute;
     background-color: rgba(255, 255, 255, 1); /* Semi-transparent white */
+    z-index: 3;
   }
   
   .circle1 {
-    width: 50px; /* Width of the first circle */
-    height: 50px; /* Height of the first circle */
-    top: 50%; /* Position from the top */
-    left: 35%; /* Position from the left */
+    width: 32px; /* Width of the first circle */
+    height: 20px; /* Height of the first circle */
+    top: 52%; /* Position from the top */
+    left: 40%; /* Position from the left */
   }
   
   .circle2 {
-    width: 50px; /* Width of the second circle */
-    height: 50px; /* Height of the second circle */
-    bottom: 30%; /* Position from the bottom */
-    right: 30%; /* Position from the right */
+    width: 32px; /* Width of the second circle */
+    height: 20px; /* Height of the second circle */
+    top: 51.5%; /* Position from the bottom */
+    left: 60%; /* Position from the right */
   }
 
 .pupil {
-    width: 20px;
-    height: 20px;
+    width: 45%;
+    height: 60%;
     background-color: black;
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 3px;
+    left: 8.5px;
     transform: translate(-50%, -50%);
+    z-index:2;
+}
+
+.pupil-left {
+    width: 15px;
+    height: 15px;
+}
+
+.pupil-right {
+    width: 13px;
+    height: 13px;
 }
 
 .frame {
@@ -137,17 +181,30 @@ h1.about-text {
     }
 }
 
+@keyframes bounceshadow {
+    0%, 100% {
+        transform: translate(-50.5%, -49.5%);
+    }
+    50% {
+        transform: translate(-50.5%, calc(-49.5% + 10px));
+    }
+}
+
 @keyframes bounceeyes {
     0%, 100% {
         transform: translateY(0%);
     }
     50% {
-        transform: translateY(20%);
+        transform: translateY(50%);
     }
 }
 
 .frameimg.bounce {
     animation: bounce 0.5s;
+}
+
+.frameimg-shadow.bounce {
+    animation: bounceshadow 0.5s;
 }
 
 .circle1.bounce, .circle2.bounce {
