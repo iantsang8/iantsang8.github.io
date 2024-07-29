@@ -2,6 +2,7 @@
 // for character eye movements
 document.addEventListener('mousemove', (e) => {
     const eyes = document.querySelectorAll('.pupil');
+    /*
     eyes.forEach(eye => {
         const rect = eye.getBoundingClientRect();
         const eyeCenterX = rect.left + rect.width / 2;
@@ -16,8 +17,37 @@ document.addEventListener('mousemove', (e) => {
         const pupilY = Math.sin(angleRad) * distance;
         
         eye.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
-    });
+        */
+    const eye1 = eyes[0].getBoundingClientRect()
+    const eye1CenterX = eye1.left + eye1.width / 2;
+    const eye1CenterY = eye1.top + eye1.height / 2;
+    const eye2 = eyes[1].getBoundingClientRect()
+    const eye2CenterX = eye2.left + eye2.width / 2;
+    const eye2CenterY = eye2.top + eye2.height / 2;
+
+    const eyeCenterX = (eye1CenterX + eye2CenterX)/2;
+    const eyeCenterY = (eye1CenterY + eye2CenterY)/2;
+
+    const angleRad = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
+    const angleDeg = angleRad * 180 / Math.PI;
+    
+    const distance = Math.min(5, Math.sqrt(Math.pow(e.clientX - eyeCenterX, 2) + Math.pow(e.clientY - eyeCenterY, 2)) / 10);
+    
+    const pupilX = Math.cos(angleRad) * distance;
+    const pupilY = Math.sin(angleRad) * distance;
+
+
+    eyes[0].style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+    eyes[1].style.transform = `translate(${pupilX*0.85}px, ${pupilY*0.85}px)`;
 });
+
+window.addEventListener('load', () => {
+    const eyes = document.querySelectorAll('.pupil');
+    eyes.forEach(eye => {
+        eye.style.transform = `translate(0px, 0px)`;
+    });
+}
+);
 
 // Function to change pupil color based on Slider 1
 // Function to change pupil color based on Slider 1
@@ -75,7 +105,9 @@ const frame = document.querySelector('.frame');
 frame.addEventListener('click', (e) => {
     // Bounce the frame image
     const frameImg = document.querySelector('.frameimg');
+    const frameImgShadow = document.querySelector('.frameimg-shadow');
     addBounceEffect(frameImg);
+    addBounceEffect(frameImgShadow);
 
     /* Bounce the pupils
     const pupils = document.querySelectorAll('.pupil');
