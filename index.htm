@@ -1,9 +1,10 @@
-<!--Version: 24/07/2024-->
+<!--Version: 29/07/2024-->
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="animations.css">
         <link rel="stylesheet" href="mainpage.css">
         <link rel="stylesheet" href="profile.css">
         <link rel="stylesheet" href="navbar.css">
@@ -16,11 +17,11 @@
         <header>
             <nav class="navbar--sticky">
                 <div>
-                    <h1 class="name--button">
+                    <h1 class="name--button animate-on-scroll">
                         <a href="https://iantsang8.github.io">Ian Tsang</a>
                     </h1>
                 </div>
-                <div class="hamburger" onclick="toggleMenu()">
+                <div class="hamburger animate-on-scroll" onclick="toggleMenu()">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -28,10 +29,10 @@
                 <div class="close-btn" onclick="toggleMenu()">x</div>
                 <div class="menu-header">Ian Tsang</div>
                 <div class="nav-links">
-                    <a class="nav--buttons" href="https://iantsang8.github.io/#about">About</a>
-                    <a class="nav--buttons" href="https://iantsang8.github.io/Experience">Experience</a>
-                    <a class="nav--buttons" href="https://iantsang8.github.io/Projects">Projects</a>
-                    <div class="dropdown" id="dropdown">
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/#about">About</a>
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/Experience">Experience</a>
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/Projects">Projects</a>
+                    <div class="dropdown animate-on-scroll" id="dropdown">
                         <a href="#" class="nav--buttons dropdown-toggle" onclick="toggleDropdown(event)">Contact Me ▾</a>
                         <div class="dropdown-content" id="dropdown-content">
                             <a href="https://www.linkedin.com/in/ian-tsang-107464166/" target="_blank">LinkedIn</a>
@@ -43,23 +44,23 @@
             </nav>
         </header>
 
-        <div class="profile">
-            <canvas id="particle-overlay"></canvas>
-            <img src="ian_tsang.jpg" alt="Ian Tsang Profile Pic" width="142" height="142">
-            <h1>
-                Ian Tsang
-            </h1>
+        <section id="profile">
+            <canvas id="particle-overlay" class="animate-on-scroll"></canvas>
+            <img src="ian_tsang.jpg" alt="Ian Tsang Profile Pic" width="142" height="142">              
+            <h1>Ian Tsang</h1>
             <h2 id="typing-text"></h2>
-        </div>
+        </section>
+
         <section id="about">
             <div class="about-container">
-                <div class="character">
+                <div class="character animate-about">
                     <div class="frame">
                         <img src="charactertest.png" alt="Character" class="frameimg">
-                        <div class="circle1"><div class="pupil"></div></div>
-                        <div class="circle2"><div class="pupil"></div></div>
+                        <img src="charactertest.png" alt="Shadow" class="frameimg-shadow">
+                        <div class="circle1"><div class="pupil pupil-left"></div></div>
+                        <div class="circle2"><div class="pupil pupil-right"></div></div>
                     </div>
-                    <div class="sliders">
+                    <div class="sliders animate-about">
                         <div class="slider-container">
                             <label for="slider1">Eye Color</label>
                             <input type="range" min="0" max="100" value="0" class="slider" id="slider1">
@@ -68,15 +69,16 @@
                             <label for="slider2">Background Color</label>
                             <input type="range" min="0" max="100" value="50" class="slider" id="slider2">
                         </div>
-                        <div class="slider-container">
+<!--                        <div class="slider-container">
                             <label for="slider3">Slider 3</label>
                             <input type="range" min="0" max="100" value="50" class="slider" id="slider3">
-                        </div>
+                        </div>-->
                     </div>
                 </div>
-                <div class="about-text">
-                    <h1 class="about-text">Hi I am Ian</h1>
-                    <p>I am a 3rd year ECE student.</p>
+                <div class="about-text animate-about">
+                    <h1 class="about-text">Hello, I'm Ian!</h1>
+                    <p>I am a 3rd year Electrical Engineering and Computer Engineering student at <b>Penn State</b>, passionate about pushing the boundaries of technology. My academic journey has fueled my interest in the fascinating realms of IoT (Internet of Things), Embedded Systems, and IC (Integrated Circuit) Design.</p>
+                    <p>As an aspiring engineer, I thrive on the challenge of bridging the gap between hardware and software to create innovative solutions. My coursework has provided me with a strong foundation in both electrical and computer engineering principles, allowing me to approach problems from multiple perspectives.</p>
                 </div>
             </div>
         </section>
