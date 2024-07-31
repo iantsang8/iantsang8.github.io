@@ -243,7 +243,7 @@ a.resume{
         max-width: 90%;
         margin-bottom: 30px;
         align-self: center;
-        margin-left: 30px;
+        margin-left: 0px;
     }
 
     .slider-container{
@@ -253,6 +253,7 @@ a.resume{
 
     .about-text {
         clear: both; /* Ensure it starts on a new line */
+        margin-left: 5px;
     }
 }
 
