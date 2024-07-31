@@ -1,0 +1,237 @@
+<!--Version: 30/07/2024-->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/animations.css">
+        <link rel="stylesheet" href="../styles/navbar.css">
+        <link rel="stylesheet" href="../styles/footer.css">
+        <link rel="stylesheet" href="timeline.css">
+        <link rel="stylesheet" href="overlay.css">
+        <link rel="stylesheet" href="experience.css">
+        <title>Experience | Ian Tsang</title>
+        <link rel="icon" type="image/x-icon" href="../images/ian_tsang.jpg">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar--sticky" style="background-color: rgba(0, 0, 0, 1);">
+                <div>
+                    <h1 class="name--button animate-on-scroll">
+                        <a href="https://iantsang8.github.io">Ian Tsang</a>
+                    </h1>
+                </div>
+                <div class="hamburger animate-on-scroll" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="close-btn" onclick="toggleMenu()">x</div>
+                <div class="menu-header">Ian Tsang</div>
+                <div class="nav-links">
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/#about">About</a>
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/Experience">Experience</a>
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/Projects">Projects</a>
+                    <div class="dropdown animate-on-scroll" id="dropdown">
+                        <a href="#" class="nav--buttons dropdown-toggle" onclick="toggleDropdown(event)">Contact Me ▾</a>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="https://www.linkedin.com/in/ian-tsang-107464166/" target="_blank" style="color:black">LinkedIn</a>
+                            <a href="iantsang8@gmail.com" target="_blank" style="color:black">Email</a>   
+                            <a href="https://github.com/iantsang8/" target="_blank" style="color:black">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <br>
+        <section id="experience" style="min-height:65vh;max-height: 65vh">
+            <div class="timeline">
+                <h2 id="education">Education</h2>
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-content left">
+                            <h3>Pennsylvania State University</h3>
+                            <p>B.S. Electrical Engineering and Computer Engineering</p>
+                        </div>
+                        <div class="timeline-icon" id="pennstate">
+                            <img src="icons/pennstate.png" alt="A">
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>Details:</h3>
+                            <p><b>Expected Graduation Date:</b> May 2026</p>
+                            <p><b>cGPA:</b> 3.59</p>
+                            <p><b>Extracurriculars:</b></p>
+                            <ul>
+                                <li>IEEE</li>
+                                <li>HKSA</li>
+                                <li>ISC</li>
+                                <li>EON</li>
+                            </ul>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" style="background-color: white; margin-top: 25px">
+            <div class="timeline">
+                <h2 id="work">Work</h2>
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-content left">
+                            <h3>Applied Science and Technology Research Institute (ASTRI)</h3>
+                            <p>June 24, 2024 - August 16, 2024</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <img src="icons/astri.png" alt="A">
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>A - Detailed</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-content left">
+                            <h3>The Walt Disney Company (HKDL)</h3>
+                            <p>May 6, 2024 - June 21, 2024</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <img src="icons/disney.png" alt="A">
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>A - Detailed</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-content left">
+                            <h3>The Hong Kong and China Gas Company (Towngas)</h3>
+                            <p>January 15, 2024 - May 3, 2024</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <img src="icons/towngas.png" alt="A">
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>A - Detailed</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" style="margin-top: -150px;">
+            <div class="timeline">
+                <h2 id="extracurriculars">Extracurriculars</h2>
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-content left">
+                            <h3>IEEE Penn State Student Chapter</h3>
+                            <p>September 2023 - Present</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <img src="icons/IEEE.png" alt="A">
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>A - Detailed</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-content left">
+                            <h3>Penn State Hong Kong Student Association</h3>
+                            <p>April 2024 - Present</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <img src="icons/HKSA.png" alt="A">
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>A - Detailed</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-content left">
+                            <h3>Engineering Orientation Network (EON)</h3>
+                            <p>August 2022 - Present</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <img src="icons/EON.png" alt="A">
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>A - Detailed</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-content left">
+                            <h3>International Student Council (ISC)</h3>
+                            <p>September 2023 - May 2024</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <img src="icons/ISC.png" alt="A">
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>A - Detailed</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" id="lastitemec">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-content left">
+                            <h3>Engineering Student Tours and Resources (ESTAR)</h3>
+                            <p>January 2024 - Present</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <img src="icons/ESTAR.png" alt="A">
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>A - Detailed</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Add this at the end of the body, just before the closing </body> tag -->
+        <div id="overlay" class="overlay">
+            <div class="overlay-content">
+            <button id="closeOverlay" class="close-button">&times;</button>
+            <div class="overlay-icon"></div>
+            <div class="overlay-text"></div>
+            </div>
+        </div>
+        <script src="../javascript/navbar.js"></script>
+        <script src="../javascript/animations.js"></script>
+        <script src="timeline.js"></script>
+    </body>
+    <footer>
+        <div>
+            <p>&copy; Copyright Ian Tsang 2024</p>
+        </div>
+        <div class="footer-buttons">
+            <a href="https://www.linkedin.com/in/ian-tsang-107464166/" target="_blank">LinkedIn</a>
+            <a href="iantsang8@gmail.com" target="_blank">Email</a>   
+            <a href="https://github.com/iantsang8/" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</html>

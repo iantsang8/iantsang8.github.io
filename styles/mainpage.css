@@ -1,0 +1,28 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    scroll-snap-align: end;
+    padding-top: 60px; /* Add padding to account for the fixed navbar */
+    min-height: 100vh; /* Ensure each section takes at least the full viewport height */
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:active, a:visited {
+    color:white;
+}

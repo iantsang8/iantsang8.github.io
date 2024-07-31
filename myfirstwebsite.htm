@@ -1,0 +1,101 @@
+<!--Version: 30/07/2024-->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/animations.css">
+        <link rel="stylesheet" href="styles/mainpage.css">
+        <link rel="stylesheet" href="styles/profile.css">
+        <link rel="stylesheet" href="styles/about.css">
+        <link rel="stylesheet" href="styles/navbar.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <title>Home | Ian Tsang</title>
+        <link rel="icon" type="image/x-icon" href="images/ian_tsang.jpg">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar--sticky">
+                <div>
+                    <h1 class="name--button animate-on-scroll">
+                        <a href="https://iantsang8.github.io">Ian Tsang</a>
+                    </h1>
+                </div>
+                <div class="hamburger animate-on-scroll" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="close-btn" onclick="toggleMenu()">x</div>
+                <div class="menu-header">Ian Tsang</div>
+                <div class="nav-links">
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/#about">About</a>
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/Experience">Experience</a>
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/Projects">Projects</a>
+                    <div class="dropdown animate-on-scroll" id="dropdown">
+                        <a href="#" class="nav--buttons dropdown-toggle" onclick="toggleDropdown(event)">Contact Me ▾</a>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="https://www.linkedin.com/in/ian-tsang-107464166/" target="_blank">LinkedIn</a>
+                            <a href="iantsang8@gmail.com" target="_blank">Email</a>   
+                            <a href="https://github.com/iantsang8/" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="profile">
+            <canvas id="particle-overlay" class="animate-on-scroll"></canvas>
+            <img src="images/ian_tsang.jpg" alt="Ian Tsang Profile Pic" width="142" height="142">              
+            <h1>Ian Tsang</h1>
+            <h2 id="typing-text"></h2>
+        </section>
+
+        <section id="about">
+            <div class="about-container">
+                <div class="character animate-about">
+                    <div class="frame">
+                        <img src="images/charactertest.png" alt="Character" class="frameimg">
+                        <img src="images/charactertest.png" alt="Shadow" class="frameimg-shadow">
+                        <div class="circle1"><div class="pupil pupil-left"></div></div>
+                        <div class="circle2"><div class="pupil pupil-right"></div></div>
+                    </div>
+                    <div class="sliders animate-about">
+                        <div class="slider-container">
+                            <label for="slider1">Eye Color</label>
+                            <input type="range" min="0" max="100" value="0" class="slider" id="slider1">
+                        </div>
+                        <div class="slider-container">
+                            <label for="slider2">Background Color</label>
+                            <input type="range" min="0" max="100" value="0" class="slider" id="slider2">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text animate-about">
+                    <h1 class="about-text">Hello, I'm Ian!</h1>
+                    <p>I am a 3rd year Electrical Engineering and Computer Engineering student at <b>Penn State</b>, passionate about pushing the boundaries of technology. My academic journey has fueled my interest in the fascinating realms of IoT (Internet of Things), Embedded Systems, and IC (Integrated Circuit) Design.</p>
+                    <p>As an aspiring engineer, I thrive on the challenge of bridging the gap between hardware and software to create innovative solutions. My coursework has provided me with a strong foundation in both electrical and computer engineering principles, allowing me to approach problems from multiple perspectives.</p>
+                    <br>
+                    <a class="resume" href="google.com" target="_blank">Résumé</a>
+                </div>
+            </div>
+        </section>
+
+        <script src="javascript/navbar.js"></script>
+        <script src="javascript/animations.js"></script>
+        <script src="javascript/profile.js"></script>
+        <script src="javascript/particles.js"></script>
+        <script src="javascript/character.js"></script>
+    </body>
+    <footer>
+        <div>
+            <p>&copy; Copyright Ian Tsang 2024</p>
+        </div>
+        <div class="footer-buttons">
+            <a href="https://www.linkedin.com/in/ian-tsang-107464166/" target="_blank">LinkedIn</a>
+            <a href="iantsang8@gmail.com" target="_blank">Email</a>   
+            <a href="https://github.com/iantsang8/" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</html>
