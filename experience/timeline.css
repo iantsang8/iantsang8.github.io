@@ -97,7 +97,7 @@ body, html {
 
 .timeline-content p {
     margin-bottom: 10px;
-    max-height: 100px;
+    max-height: 120px;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
@@ -128,40 +128,35 @@ body, html {
 
 
 @media screen and (max-width: 768px) {
-    #experience {
-        min-height:200vh;
-        max-height:300vh;
-    }
-
-    #education {
-        margin-top:-5px;
-    }
-
-    #pennstate{
-        margin-top:-75px;
-    }
-
+    /* Improved mobile stacking */
     .timeline-content-wrapper {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
-    .timeline-content.left,
+    .timeline-content.left, 
     .timeline-content.right {
-        margin: 10px 0;
-        text-align: center;
-        width: 100%;
-        max-width: 300px;
+        width: 90% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 15px;
     }
 
     .timeline-icon {
-        order: -1;
-        margin-bottom: 10px;
+        order: 0;
+        margin: 20px 0;
     }
 
-    .timeline-line {
-        left: 50%;
-        transform: translateX(-50%);
+    .timeline-item {
+        min-height: auto;
+        margin-bottom: 40px;
+    }
+
+    #experience {
+        min-height: auto !important;
+        max-height: none !important;
+        padding: 100px 15px;
     }
 }
 

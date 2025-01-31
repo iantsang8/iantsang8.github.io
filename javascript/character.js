@@ -31,7 +31,7 @@ document.addEventListener('mousemove', (e) => {
     const angleRad = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
     const angleDeg = angleRad * 180 / Math.PI;
     
-    const distance = Math.min(5, Math.sqrt(Math.pow(e.clientX - eyeCenterX, 2) + Math.pow(e.clientY - eyeCenterY, 2)) / 10);
+    const distance = Math.min(5, Math.sqrt(Math.pow(e.clientX - eyeCenterX, 2) + Math.pow(e.clientY - eyeCenterY, 2)) / 150);
     
     const pupilX = Math.cos(angleRad) * distance;
     const pupilY = Math.sin(angleRad) * distance;

@@ -46,22 +46,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlayContent = document.querySelector('.overlay-content');
     const overlayIcon = document.querySelector('.overlay-icon');
     const overlayText = document.querySelector('.overlay-text');
+    const overlayDesc = document.querySelector('.overlay-description');
     const closeOverlay = document.getElementById('closeOverlay');
 
     readMoreButtons.forEach(button => {
         button.addEventListener('click', () => {
+            overlay.scrollTo(0, 0);
             const timelineItem = button.closest('.timeline-item');
             const icon = timelineItem.querySelector('.timeline-icon img').cloneNode(true);
             const content = timelineItem.querySelector('.timeline-content.left h3').textContent;
+            const description = timelineItem.querySelector('.timeline-content.left h2').innerHTML|| 'No description available.';
 
             overlayIcon.innerHTML = '';
             overlayIcon.appendChild(icon);
             overlayText.textContent = content;
+            document.querySelector('.overlay-description').innerHTML = description;
 
             overlay.classList.add('active');
             overlayContent.classList.add('animate');
             overlayIcon.classList.add('animate');
             overlayText.classList.add('animate');
+            overlayDesc.classList.add('animate');
         });
     });
 
@@ -69,5 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.remove('active');
         overlayIcon.classList.remove('animate');
         overlayText.classList.remove('animate');
+        overlayDesc.classList.remove('animate');
     });
 });
