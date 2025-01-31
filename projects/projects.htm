@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/animations.css">
+        <link rel="stylesheet" href="../styles/navbar.css">
+        <link rel="stylesheet" href="../styles/footer.css">
+        <link rel="stylesheet" href="../styles/profile.css">
+        <title>Experience | Ian Tsang</title>
+        <link rel="icon" type="image/x-icon" href="../images/ian_tsang.jpg">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar--sticky" style="background-color: rgba(0, 0, 0, 1);">
+                <div>
+                    <h1 class="name--button animate-on-scroll">
+                        <a href="https://iantsang8.github.io">Ian Tsang</a>
+                    </h1>
+                </div>
+                <div class="hamburger animate-on-scroll" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="close-btn" onclick="toggleMenu()">x</div>
+                <div class="menu-header">Ian Tsang</div>
+                <div class="nav-links">
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/#about">About</a>
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/experience/experience.htm">Experience</a>
+                    <a class="nav--buttons animate-on-scroll" href="https://iantsang8.github.io/projects/projects.htm">Projects</a>
+                    <div class="dropdown animate-on-scroll" id="dropdown">
+                        <a href="#" class="nav--buttons dropdown-toggle" onclick="toggleDropdown(event)">Contact Me ▾</a>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="https://www.linkedin.com/in/ian-tsang-107464166/" target="_blank" style="color:black">LinkedIn</a>
+                            <a href="iantsang8@gmail.com" target="_blank" style="color:black">Email</a>   
+                            <a href="https://github.com/iantsang8/" target="_blank" style="color:black">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <br>
+        <section id="profile">     
+            <h1>Work In Progress...</h1>
+        </section>
+        <footer>
+            <div>
+                <p>&copy; Copyright Ian Tsang 2024</p>
+            </div>
+            <div class="footer-buttons">
+                <a href="https://www.linkedin.com/in/ian-tsang-107464166/" target="_blank">LinkedIn</a>
+                <a href="iantsang8@gmail.com" target="_blank">Email</a>   
+                <a href="https://github.com/iantsang8/" target="_blank">GitHub</a>
+            </div>
+        </footer>
+        <script src="../javascript/navbar.js"></script>
+        <script src="../javascript/animations.js"></script>
+    </body>
+</html>
